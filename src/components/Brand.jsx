@@ -6,7 +6,6 @@ import { useState } from "react";
 
 const Brand = () => {
   const [show, setShow] = useState(true);
-  const [showVid, setShowVid] = useState(false);
 
   return (
     <section className="brand ">
@@ -20,10 +19,9 @@ const Brand = () => {
             src={brand}
             alt="Dinner Logo"
             id="brand"
-            onClick={() => setShowVid(!showVid)}
+            onClick={() => setShow(!show)}
           />
         ) : ( 
-          
           <div className="div-vid text-right">
             {" "}
             <video
