@@ -5,8 +5,8 @@ import vid from "./showreel nuevo.mp4";
 import { useState } from "react";
 
 const Brand = () => {
-  //usar ustestate en vez de js vanilla para estas transcisiones
   const [show, setShow] = useState(true);
+  const [showVid, setShowVid] = useState(false);
 
   return (
     <section className="brand ">
@@ -20,10 +20,11 @@ const Brand = () => {
             src={brand}
             alt="Dinner Logo"
             id="brand"
-            onClick={() => setShow(!show)}
+            onClick={() => setShowVid(!showVid)}
           />
-        ) : (
-          <div className="div-vid">
+        ) : ( 
+          
+          <div className="div-vid text-right">
             {" "}
             <video
               id="fm-video"
@@ -38,7 +39,7 @@ const Brand = () => {
             <i
                 onClick={() => setShow(!show)}
                 alt="Close"
-                class=" absolute text-white top-5 drop-shadow-lg right-10 cursor-pointer text-[39px] uil uil-times-circle "
+                class="m-3 text-white drop-shadow-lg right-23  cursor-pointer text-[32px] uil uil-times-circle "
               ></i>
             
           </div>
